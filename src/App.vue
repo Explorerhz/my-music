@@ -1,19 +1,21 @@
 <template>
   <div id="app">
-    Git is a distributed version control system.
-    Git is free software distributed under the GPL.
-    Git has a mutable index called stage.
-    Git has a mutable index called stage.
+    <m-header></m-header>
+    <tab></tab>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import MHeader from 'components/m-header/m-header'
+import Tab from 'components/tab/tab'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    MHeader,
+    Tab
+  }
 }
 </script>
 <style scoped lang='stylus'>
-  @import '~common/stylus/variable';
-  #app
-    color $color-theme
 </style>
